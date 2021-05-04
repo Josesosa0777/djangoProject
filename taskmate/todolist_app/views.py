@@ -58,6 +58,13 @@ def pending_task(request, task_id):
     return redirect('todolist')
 
 
+def index(request):
+    context = {
+        'index_text': 'Welcome Index Page',
+    }
+    return render(request, 'index.html', context)  # {'index_text': context}
+
+
 def contact(request):
     context = {
         'contact_text': 'Welcome to Contact page',
